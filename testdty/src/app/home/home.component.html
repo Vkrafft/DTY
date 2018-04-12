@@ -1,0 +1,37 @@
+<div class="container">
+
+  <div style="text-align:center">
+    <h1>
+      <span class="label label-success">Page d'accueil</span>
+    </h1>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-md-8 col-sm-12 col-xs-12">
+      <form class="form-inline" #form="ngForm">
+        <div class="form-group">
+          <input type="text" class="form-control" name="code_postal" [(ngModel)]="code_postal" placeholder="Entrer le code postal" required>
+        </div>
+        <button type="button" (click)="setCenter()" class="btn1"> Rechercher par code postal</button>
+        <div class="form-group">
+          <input type="text" class="form-control" name="departement" [(ngModel)]="departement" placeholder="Entrer le département" required>
+        </div>
+        <button type="button" (click)="setCenter()" class="btn2"> Rechercher par département</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-center">
+        <h3>
+          <!-- Carte googlemaps -->
+          <div #gmap style="width:100%;height:400px"></div>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+
+</div>
